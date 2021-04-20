@@ -16,15 +16,14 @@ import org.springframework.stereotype.Component;
 /**
  * spring redis 工具类
  *
- * @author ry
  **/
-@SuppressWarnings(value = { "unchecked", "rawtypes" })
-@Component
-public class RedisCache
-{
-    @Autowired
-    public RedisTemplate redisTemplate;
+public class RedisCache {
 
+	private RedisTemplate redisTemplate;
+
+    public RedisCache(RedisTemplate redisTemplate){
+    	this.redisTemplate = redisTemplate;
+    }
     /**
      * 缓存基本的对象，Integer、String、实体类等
      *
@@ -93,7 +92,7 @@ public class RedisCache
      */
     public void deleteObject(final String key)
     {
-    	redisTemplate.delete(key);
+        redisTemplate.delete(key);
     }
 
     /**

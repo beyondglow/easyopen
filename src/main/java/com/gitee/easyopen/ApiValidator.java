@@ -3,6 +3,8 @@ package com.gitee.easyopen;
 import com.gitee.easyopen.exception.BusinessParamException;
 import com.gitee.easyopen.message.ErrorFactory;
 import com.gitee.easyopen.message.Errors;
+import com.gitee.easyopen.session.RedisSessionManager;
+
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
